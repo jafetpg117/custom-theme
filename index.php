@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php if (isset($_POST['quotebtn'])) {
     $name = sanitize_text_field($_POST['fullname']);
-    $email = sanitize_text_field($_POST['email']);
+    $dbemail = sanitize_text_field($_POST['email']);
     $phone = sanitize_text_field($_POST['phone']);
     $instype = sanitize_text_field($_POST['instype']);
     $balance = sanitize_text_field($_POST['balance']);
@@ -22,7 +22,7 @@
               <th>Name: </th><td>' . $name . '</td> 
           </tr> 
           <tr> 
-              <th>Email: </th><td>' . $email . '</td> 
+              <th>Email: </th><td>' . $dbemail . '</td> 
           </tr> 
           <tr> 
               <th>Phone: </th><td>' . $phone . '</td> 
@@ -47,7 +47,7 @@
     global $wpdb;
     $wpdb->insert("wp_quotes", array(
         "fullname" => $name,
-        "email" => $email,
+        "email" => $dbemail,
         "phone" => $phone,
         "instype" => $instype,
         "balance" => $balance,
@@ -150,7 +150,7 @@
                 <h2 class="section-title-left mar-t-3 wow animate__animated animate__fadeInLeft">Get Your Insurance Today!</h2>
                 <form method="post" class="frm mar-t-5">
                     <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-mbl">
                             <label for="input1" class="form-label">Your Full Name</label>
                             <input type="text" class="form-control" id="input1" name="fullname" placeholder="John Dames" required>
                         </div>
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <div class="col-md-6">
+                        <div class="col-md-6 mb-mbl">
                             <label for="input3" class="form-label">Phone Number</label>
                             <input type="text" class="form-control" id="input3" name="phone" placeholder="(401)715-344" required>
                         </div>
@@ -178,25 +178,26 @@
                                 <option>Vehicle Insurance</option>
                             </select>
                         </div>
-
+						</div>
+						<div class="row">
                         <div class="col-md-12 pt-3">
                             <div class="slider-container">
                                 <p for="input4" class="form-label">Limits of Balance</p>
                                 <input type="range" min="0" max="100" value="25" name="balance" class="slider" required id="slider1" oninput="this.nextElementSibling.value = this.value">
-
-
-                                <output class="slider-value" id="slider1-value">25</output>
-
-                                <span>Selected Value:</span>
-                                <output class="sum-value"></output>
+								<div class="row">
+									<div class="col-md-6">
+											<span>Selected Value:</span>
+									</div>
+									<div class="col-md-6">
+										 <span class="text-right" id="slider_value">25</span>
+									</div>
+								</div>
+								</div>
                             </div>
 
 
                         </div>
-
-
-                    </div>
-                    <div class="submit-button ">
+                    <div class="submit-button mt-3">
                     <button type="submit" name="quotebtn" class="cust-button wow animate__animated animate__fadeInLeft">Get a Quote</button>
                     </div>
                 </form>
@@ -210,7 +211,13 @@
 
 
 <!-- CONTACT SECTION ENDS -->
-
+<script>
+jQuery(document).ready(function(){
+	jQuery(document).on('input', '#slider1', function() {
+    jQuery('#slider_value').html( jQuery(this).val() );
+});
+})
+</script>
 
 
 

@@ -1,6 +1,5 @@
 
 
-
 body {
   font-family: 'Manrope', sans-serif;
   color: #727272;
@@ -336,7 +335,7 @@ color: #0E1941;
   border: 1px solid #F3F3F5;
   padding-top: 10px;
   bottom: 15px;
-  left: 170px;
+  left: calc(100% - 60px);;
   text-align: center;
 }
 

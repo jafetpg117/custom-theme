@@ -2,14 +2,14 @@
     <div class="footer-area">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-space-right">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2 col-space-right">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-white.png" alt="">
                     <span class="foot-min c-pt-4">Call Us</span>
                     <p class="foot-contact"><a href="tel:12146578098">1-214-657-8098</a></p>
                     <span class="foot-min">Email Us</span>
                     <p class="foot-contact"><a href="mailto:example@gmail.com">example@gmail.com</a></p>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 quick">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2 quick">
                     <p class="foot-title">Services</p>
                     <ul class="footer-list">
                         <li>Business insurance</li>
@@ -19,7 +19,7 @@
                         <li>Marriage insurance</li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 list-2 col-space-right">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2 list-2 col-space-right">
                     <ul class="footer-list">
                         <li>Travel Insurance</li>
                         <li>Cyber Insurance</li>
@@ -28,7 +28,7 @@
                         <li>Fire Insurance</li>
                     </ul>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 quick">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2 quick offset-md-2-custom">
                     <p class="foot-title">Quick Link</p>
                     <ul class="footer-list">
                         <li>Home</li>
@@ -79,7 +79,7 @@
                 <!-- Display the thumbnail image in HTML -->
 
 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 quick">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-2 col-xl-2 quick">
                     <div class="foot-title">Social</div>
                     <div class="social-icn">
                         <span class="soc-icn mr-4"> <a href="<?php echo $link_to_social_3; ?>" target="_blank"> <img class="social-image" src="<?php echo $post_thumbnail_url_2; ?>" alt=""> </a> </span>

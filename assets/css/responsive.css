@@ -1,11 +1,8 @@
 /* Big screen :1200px. */
-@media (min-width: 1500px) and (max-width: 1800px) {
-    .nav-header a { 
-        font-size: 13px;
-        line-height: 15px;
-        margin-left: 8px; 
-        padding-right: 20px;
-    }
+@media (min-width: 1500px) {
+    .container {
+    max-width: 1300px !important;
+}
     .header-top p { 
         line-height: 13px;
         margin-left: 17.6%; 
@@ -14,15 +11,12 @@
         width: 22.9%;
         height: 57px; 
     }
+}
 
-
-
-
-
-
-
-} 
 @media (min-width: 1200px) and (max-width: 1500px) {
+	.container {
+    max-width: 1240px !important;
+}
     .footer-contact .sing-item.last a {
         margin-right: 10px; 
     }
@@ -391,7 +385,7 @@
                 border: 1px solid #F3F3F5;
                 padding-top: 10px;
                 bottom: 15px;
-                left: 130px;
+                left: calc(100% - 50px);
                 text-align: center;
             }
 .wrapper-contact {
@@ -826,4 +820,23 @@ span.foot-min {
 /* Large Mobile screen :480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 .container {width:450px} 
+	.card-deck .card{
+		flex:1 1 30% !important;
+	}
+}
+
+/* Normal screen :992px. */
+@media (min-width: 768px) and (max-width: 992px) { 
+	.footer-area .col-space-right{
+		margin-right:0px !important;
+	}
+	.footer-area {
+	height:41em;
+	}
+	.card-deck .card{
+		flex:1 1 30% !important;
+	}
+	.offset-md-2-custom{
+		margin-left: 16.66667% !important;
+	}
 }
