@@ -1,0 +1,16 @@
+{
+  "name": "boilerplate-gulp",
+  "version": "1.0.0",
+  "description": "Boilerplate gulp template",
+  "main": "gulpfile.js",
+  "author": "Jafet Prieto",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.12",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.1.0"
+  }
+}
